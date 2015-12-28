@@ -9,4 +9,4 @@ VOLUME /var/lib/docker-run
 
 RUN chmod 755 run.sh
 
-CMD ["run.sh"]
+CMD ["./run.sh"]

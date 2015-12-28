@@ -11,7 +11,7 @@ docker build -t zouchao2010/docker-run .
 ```shell
 docker run  --name docker-run \
             -h docker-run \
-            -v /data/docker-run_data:/var/lib/docker-run \
+            -v /data/docker-run:/var/lib/docker-run \
             -it --rm zouchao2010/docker-run
             
 ```
@@ -19,8 +19,10 @@ docker run  --name docker-run \
 ## run(创建并运行一个容器，以守护进程方式)
 ```shell
 docker run  --name docker-run \
+            --restart=always \
+            -m 2048m \
             -h docker-run \
-            -v /data/docker-run_data:/var/lib/docker-run \
+            -v /data/docker-run:/var/lib/docker-run \
             -dt zouchao2010/docker-run
             
 ```
